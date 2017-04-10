@@ -1,0 +1,77 @@
+
+/*** Preloader ***/
+
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('../assets/img/loading.gif') no-repeat center center fixed;
+	background-size: 10vw;
+	background-color: #fff; /* change if the mask should have another color then white */
+	z-index: 99; /* makes sure it stays on top */
+ }
+#status {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%; /* centers the loading animation horizontally one the screen */
+	top: 50%; /* centers the loading animation vertically one the screen */
+	margin: -100px 0 0 -100px; /* is width and height divided by two */
+ }
+
+
+/*** Hamburger Animation ***/
+.intro #container-hamburger .open {
+	background-color: #111111;
+}
+.intro #container-hamburger .open:hover #nav_line_top,
+.intro #container-hamburger .open:hover #nav_line_bottom  {
+background-color: #fd3f23;
+}
+#container-hamburger .open #nav_line_middle {
+	width: 0;
+	opacity: 0;
+ }
+
+#container-hamburger .open #nav_line_top {
+	-webkit-transform: translateY(9px) rotate(45deg);
+  -ms-transform: translateY(9px) rotate(45deg);
+  -o-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+	background-color: #666666;
+ }
+
+#container-hamburger .open #nav_line_bottom {
+	-webkit-transform: translateY(-9px) rotate(-45deg);
+  -ms-transform: translateY(-9px) rotate(-45deg);
+  -o-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+	background-color: #666666;
+ }
+ #container-hamburger:hover #nav_line_middle {
+ 	width: 20px;
+ 	background-color: #111111;
+ }
+#container-hamburger:hover #nav_line_middle,
+#container-hamburger:hover #nav_line_top,
+#container-hamburger:hover #nav_line_bottom {
+	background-color: #111111;
+}
+
+.openBlock #ham-items {
+	text-align: center;
+  position: fixed;
+  display: flex;
+  width: 22.5%;
+  height: 72px;
+	margin: 15px 95px 15px 3px;
+  background: #0e0e0e;
+	-webkit-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+}
+.openBlock #ham-items ul {
+	margin-left: -20px;
+}
